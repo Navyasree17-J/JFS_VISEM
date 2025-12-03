@@ -27,15 +27,15 @@ function showInventor() {
         },
         linus: {
             img: "images/linus.jpg",
-            text: "Creator of Linux.\nOpen-source kernel.\nInfluential in OS design."
+            text: "Creator of Linux.\nOpen-source kernel.\nInfluential OS."
         },
         john: {
             img: "images/john.jpg",
-            text: "Inventor of LISP.\nAI pioneer.\nCoined the term AI."
+            text: "Inventor of LISP.\nArtificial Intelligence pioneer.\nCoined AI term."
         },
         niklaus: {
             img: "images/niklaus.jpg",
-            text: "Inventor of Pascal.\nFocused on structured programming.\nEducational language."
+            text: "Inventor of Pascal.\nStructured programming.\nEducational language."
         },
         ken: {
             img: "images/ken.jpg",
@@ -43,25 +43,26 @@ function showInventor() {
         },
         rasmus: {
             img: "images/rasmus.jpg",
-            text: "Inventor of PHP.\nServer-side scripting.\nWeb applications."
+            text: "Inventor of PHP.\nServer-side scripting.\nWeb development."
         }
     };
 
     if (select === "") {
         image.src = "";
         details.innerText = "";
-        imageBox.style.borderRadius = "50%"; // reset to circle
+        imageBox.style.borderRadius = "50%";
+        imageBox.classList.remove("glow");
         return;
     }
 
-    // Set image & text
     image.src = data[select].img;
     details.innerText = data[select].text;
 
-    // Special condition for James Gosling
     if (select === "james") {
-        imageBox.style.borderRadius = "0";   // square
+        imageBox.style.borderRadius = "0";     // Square
+        imageBox.classList.add("glow");        // Glow
     } else {
-        imageBox.style.borderRadius = "50%"; // circle
+        imageBox.style.borderRadius = "50%";  // Circle
+        imageBox.classList.remove("glow");    // No glow
     }
 }
