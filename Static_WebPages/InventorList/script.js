@@ -2,6 +2,7 @@ function showInventor() {
     const select = document.getElementById("inventorSelect").value;
     const image = document.getElementById("inventorImage");
     const details = document.getElementById("inventorDetails");
+    const imageBox = document.querySelector(".image-circle");
 
     const data = {
         guido: {
@@ -49,8 +50,18 @@ function showInventor() {
     if (select === "") {
         image.src = "";
         details.innerText = "";
+        imageBox.style.borderRadius = "50%"; // reset to circle
+        return;
+    }
+
+    // Set image & text
+    image.src = data[select].img;
+    details.innerText = data[select].text;
+
+    // Special condition for James Gosling
+    if (select === "james") {
+        imageBox.style.borderRadius = "0";   // square
     } else {
-        image.src = data[select].img;
-        details.innerText = data[select].text;
+        imageBox.style.borderRadius = "50%"; // circle
     }
 }
