@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Center page horizontally ONLY */
+.page-container {
+    width: 600px;
+    margin: 40px auto;   /* ✅ centers everything */
+    text-align: center;
+}
+
+/* Heading */
+h6 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown */
+.dropdown-section {
+    margin-bottom: 40px;
+}
+
+.dropdown-section select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* Circle + Square row */
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;   /* space between circle & square */
+}
+
+/* Circle */
+.image-circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Image inside circle */
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Square */
+.details-box {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+}
