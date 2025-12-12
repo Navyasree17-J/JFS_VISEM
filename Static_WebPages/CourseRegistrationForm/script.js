@@ -38,3 +38,25 @@ document.getElementById("regForm").addEventListener("submit", function(e){
 });
 
 */
+
+function calculateTotal() {
+    let subjects = document.querySelectorAll(".subject");
+    let total = 0;
+
+    subjects.forEach(sub => {
+        if (sub.checked) {
+            total += parseInt(sub.value);
+        }
+    });
+
+    document.getElementById("total").innerText = total;
+    return total;
+}
+
+function submitForm() {
+    let total = calculateTotal();
+
+    //  Show message below form instead of popup alert
+    document.getElementById("msg").innerText =
+        "Registration Successful! Total Registration Fee: ₹" + total;
+}

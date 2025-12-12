@@ -54,3 +54,49 @@
 </html>
 
 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Course Registration Form</h2>
+
+<form onsubmit="submitForm(); return false;">
+    Student Name:
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <br><br>
+
+    Select Subjects:
+    <br>
+
+    <input type="checkbox" class="subject" value="1000"> Data Structures (₹1000)
+    <input type="checkbox" class="subject" value="1200"> Operating Systems (₹1200)
+    <input type="checkbox" class="subject" value="1500"> DBMS (₹1500)
+    <input type="checkbox" class="subject" value="1800"> Computer Networks (₹1800)
+    <input type="checkbox" class="subject" value="2000"> Java Programming (₹2000)
+    <input type="checkbox" class="subject" value="5000"> Java Full Stack (₹5000)
+    <input type="checkbox" class="subject" value="6000"> Computer Programming (₹6000)
+
+    <br><br>
+
+    Total Registration Fee: ₹
+    <span id="total">0</span>
+
+    <br><br>
+
+    <input type="submit" value="Submit Registration">
+</form>
+
+<!--  Message appears here (below form, no popup) -->
+<p id="msg"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
+
